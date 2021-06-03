@@ -1,0 +1,2 @@
+Spp	Chr	Pos	Type	Spp_A_Allele	Rest_ind_allele	A_max_AF	AF_A_list	AF_ALL_list	rest_selected_species_AF_list
+spp1	4482	9	ssa	[0, 4, 0, 0]	[10, 0, 0, 0]	1.0	[0.0, 1.0, 0.0, 0.0]	[1.0, 0.0, 0.0, 0.0]	[[1.0, 1.0], [0.0, 0.0], [0.0, 0.0], [0.0, 0.0]]

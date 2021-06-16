@@ -40,6 +40,6 @@ for acc in seq:
 for i in open(args.seqlist):
 	i = i.strip().split()
 	if i[0] in selected_seq:
-		outfile.write('>{0}\n{1}\n'.format(i[1],selected_seq[i[0]]))
+		outfile.write('>{0}\n{1}\n'.format(i[0],selected_seq[i[0]]))
 
 outfile.close()

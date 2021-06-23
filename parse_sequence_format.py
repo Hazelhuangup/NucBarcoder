@@ -13,3 +13,4 @@ def open_file(seqfile):
 		seq = None
 		print('not supported file format')
 	return seq
+

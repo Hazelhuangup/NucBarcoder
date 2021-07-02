@@ -1,12 +1,13 @@
 #/usr/local/bin/R
 args<-commandArgs(TRUE)
 library(ggplot2)
+library(xlsx)
 
 FILE<-args[1]
 PDF<-args[2]
 pdf(PDF,width=10,height=8)
 
-data <- read.table(FILE, NULL, header = TRUE)
+data <- read.xlsx(FILE,sheetIndex = 'Sheet1', header = TRUE)
 data$Species_Name = factor(data$Species_Name, levels = unique(data$Species_Name))
 mydf <- data.frame(
   Spp_Name= data$Species_Name,

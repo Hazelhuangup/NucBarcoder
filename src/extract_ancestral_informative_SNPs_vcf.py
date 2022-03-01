@@ -59,7 +59,12 @@ def allele_freq(species_alleles):
 	return [freq,sum(freq)]
 
 # for every SNP locus, put all individuals's allele in a list: all_alleles = ['','',0/0,1/0,'',1/0,0/0,'',0/1,1/0,'0/2','','',...]
-for i in open(args.vcf):
+if args.vcf.endswith(".gz"):
+	opener = gzip.open
+else:
+	opener = open
+
+for i in opener(args.vcf, "rt"):
 	if i.startswith('#CHROM'):
 		position_in_vcf = i.strip().split()
 		Nsample=len(position_in_vcf)

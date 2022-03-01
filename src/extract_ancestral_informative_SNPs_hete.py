@@ -85,7 +85,10 @@ seq = open_file(args.seqfile)
 selected_seq = {}
 for acc in seq:
 	if acc.id in selected_samples:
+		selected_samples.remove(acc.id)
 		selected_seq[acc.id] = acc.seq.upper()
+if len(selected_samples)!= 0:
+	print("sequence not found for ", selected_samples)
 for A in samples_in_selected_species:
 	count_bp = 0
 	rest_individual_list, rest_selected_species_name, rest_species_allele_dict= sample_name_list[:], copy.deepcopy(samples_in_selected_species),{}

@@ -1,4 +1,4 @@
-# SSSNPs Species_specific_alleles_analysis
+# NucBarcoder [SSSNPs Species_specific_alleles_analysis]
 
 Current version: 1.0 (March 2022)
 
